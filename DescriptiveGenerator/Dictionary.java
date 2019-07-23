@@ -1,7 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Dictionary {
@@ -15,7 +17,7 @@ public class Dictionary {
 	public Dictionary() {
 		words = new ArrayList<String>();
 
-		readFile("dictionary.txt");
+		readFile("Dictionaries/dictionary.txt");
 	}
 
 	/**
@@ -39,7 +41,7 @@ public class Dictionary {
 
 		// check file exists
 		try {
-			file = new Scanner(new File(path));
+			file = new Scanner(new File("Dictionaries/"+path));
 		} catch (FileNotFoundException exception) {
 			System.err.println(path + " does not exist ... aborting");
 			return;
@@ -65,15 +67,18 @@ public class Dictionary {
 	
 	public String genWords(int wordCount) {
 		String output = "";
+		Random numberGen = new Random(new Date().getTime());
 		
 		for(int i = 0; i < wordCount; ++i) {
-			System.out.println("Generating Word "+ (i + 1));
+			System.out.println("Generating Word "+ (i + 1) + "...");
 			
 			if(i != 0) {
 				output = output.concat(" ");
 			}
-					
-			output = output.concat(words.get((int) (Math.random()*100)%length));
+			
+			int localIndex = Math.abs(numberGen.nextInt())%length;
+			
+			output = output.concat(words.get(localIndex%length));
 		}
 		
 		return output;
