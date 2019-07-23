@@ -69,18 +69,17 @@ public class Dictionary {
 		String output = "";
 		Random numberGen = new Random(new Date().getTime());
 		
+		System.out.println("[New Pass]");
+		
 		for(int i = 0; i < wordCount; ++i) {
-			System.out.println("Generating Word "+ (i + 1) + "...");
-			
-			if(i != 0) {
-				output = output.concat(" ");
-			}
+			System.out.println("["+ (i + 1) + "]");
 			
 			int localIndex = Math.abs(numberGen.nextInt())%length;
 			
-			output = output.concat(words.get(localIndex%length));
+			output = output.concat(words.get(localIndex%length) + " ");
 		}
 		
+		System.out.println("[End Pass]");
 		return output;
 	}
 }
