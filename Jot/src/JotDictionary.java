@@ -6,26 +6,26 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Dictionary {
+public class JotDictionary {
 	public int length = 0;
 	private List<String> words = null;
 
 	/**
-	 * Dictionary default constructor, populates field "words" from default
+	 * JotDictionary default constructor, populates field "words" from default
 	 * dictionary "./dictionary.txt"
 	 */
-	public Dictionary() {
+	public JotDictionary() {
 		words = new ArrayList<String>();
 
 		readFile("Dictionaries/dictionary.txt");
 	}
 
 	/**
-	 * Dictionary constructor, populates field "words" from dictionary "path"
+	 * JotDictionary constructor, populates field "words" from dictionary "path"
 	 * 
 	 * @param path File path to read dictionary contents from
 	 */
-	public Dictionary(String path) {
+	public JotDictionary(String path) {
 		words = new ArrayList<String>();
 
 		readFile(path);

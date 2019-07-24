@@ -12,20 +12,22 @@ public class Application {
 			System.err.println("Unknown arguments, use: [number] [noun]<optional>");
 			return;
 		}
+		
+		new JotWindow("Jot", 400, 450);
 
 		// if 2 arguments passed
 		if (!genNoun) {
 			adjectives = Integer.parseInt(args[0]);
 		}
 
-		Dictionary dict = new Dictionary("adjectives.txt");
+		JotDictionary dict = new JotDictionary("adjectives.txt");
 
 		// adjectives
 		result = result.concat(dict.genWords(adjectives));
 
 		// nouns
 		if (genNoun) {
-			dict = new Dictionary("nouns.txt");
+			dict = new JotDictionary("nouns.txt");
 			result = result.concat(dict.genWords(1));
 		} else {
 			result = result.concat(args[1]);
