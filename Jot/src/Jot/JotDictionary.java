@@ -1,3 +1,5 @@
+package Jot;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -11,7 +13,7 @@ public class JotDictionary {
 	private List<String> words = null;
 
 	/**
-	 * JotDictionary default constructor, populates field "words" from default
+	 * Jot.JotDictionary default constructor, populates field "words" from default
 	 * dictionary "./dictionary.txt"
 	 */
 	public JotDictionary() {
@@ -21,7 +23,7 @@ public class JotDictionary {
 	}
 
 	/**
-	 * JotDictionary constructor, populates field "words" from dictionary "path"
+	 * Jot.JotDictionary constructor, populates field "words" from dictionary "path"
 	 * 
 	 * @param path File path to read dictionary contents from
 	 */
