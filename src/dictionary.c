@@ -42,6 +42,33 @@ void appendEntry(char* word, dictionary* dict){
 }
 
 void logDictionary(dictionary* dict){
-    puts(dict->path);
-    printf("[%d]\n", dict->length);
+    printf("Dictionary Path: %s [LENGTH: %d]\n", dict->path, dict->length);
+
+    for(int entry = 0; entry < dict->length; ++entry){
+        puts(dict->contents[entry]);
+    }
 }
+
+char* genWords(int count, dictionary* dict){
+    char* result = malloc(sizeof(char));
+    int size = 0;
+
+    for(int pass = 0; pass < count; ++pass){
+        char* word_buffer = dict->contents[rand()%dict->length];
+        int gen_size = strlen(word_buffer);
+
+        result = realloc(result, size + ++gen_size);
+
+        sprintf(&result[size], "%s", word_buffer);
+        size+=gen_size;
+
+        printf("%d[%d]%s\n", pass, size, result);
+
+        result[size-1] = ' ';
+    }
+
+    result[size] = '\0';
+    
+    return result;
+}
+

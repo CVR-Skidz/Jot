@@ -21,9 +21,9 @@ int main(int argc, char* argv[]){
 
     dictionary adjectives = createDictionary("test.txt");
 
-    for(int word = 0; word < adjectives.length; ++word){
-        puts(adjectives.contents[word]);
-    }
+    //logDictionary(&adjectives);
+
+    puts(genWords(atoi(argv[1]), &adjectives)); 
 
     return 0;
 }
