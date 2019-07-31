@@ -1,20 +1,27 @@
 package Jot;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+
 import javafx.stage.Stage;
 
 public class JotApplication extends Application {
 
 	@Override
 	public void start(Stage stage){
-		String javaVersion = System.getProperty("java.version");
-		String javafxVersion = System.getProperty("javafx.version");
-		Label l = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-		Scene scene = new Scene(new StackPane(l), 640, 480);
-		stage.setScene(scene);
+
+		VBox container = new VBox();
+		container.setAlignment(Pos.CENTER);
+
+		container.setFillWidth(false);
+
+		JotLabel heading = new JotLabel("JOT", 150, 60);
+		container.getChildren().add(heading);
+
+		Scene root = new Scene(container, 400, 500);
+		stage.setScene(root);
 		stage.show();
 	}
 
