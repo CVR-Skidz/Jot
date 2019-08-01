@@ -3,8 +3,11 @@ package Jot;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class JotApplication extends Application {
@@ -12,16 +15,35 @@ public class JotApplication extends Application {
 	@Override
 	public void start(Stage stage){
 
-		VBox container = new VBox();
+		/*VBox container = new VBox();
 		container.setAlignment(Pos.CENTER);
 
 		container.setFillWidth(false);
 
-		JotLabel heading = new JotLabel("JOT", 150, 60);
-		container.getChildren().add(heading);
+		container.getChildren().add(new JotLabel("JOT", 150, 60));
 
 		Scene root = new Scene(container, 400, 500);
 		stage.setScene(root);
+		stage.show();*/
+
+		//window
+		stage.setTitle("Shape Sample");
+
+		//window contents layout
+		Pane pane = new Pane();
+
+		Circle circle = new Circle();
+		circle.centerXProperty().bind(pane.widthProperty().divide(2));
+		circle.centerYProperty().bind(pane.heightProperty().divide(4));
+		circle.setRadius(20);
+
+		circle.setStyle("-fx-stroke: #AF2FCF; -fx-stroke-width: 3px; -fx-fill: #EE2fAF;");
+		Color color = new Color(0.8, 0.2, 0.6, 0.5);
+
+		pane.getChildren().add(circle);
+		pane.getChildren().add(new Button("Test"));
+
+		stage.setScene(new Scene(pane, 200, 200));
 		stage.show();
 	}
 
@@ -57,7 +79,7 @@ public class JotApplication extends Application {
 		} else {
 			result = result.concat(args[1]);
 		}
-		
+
 		System.out.println("\n--- Name: " + result);
 	}
 }
