@@ -1,37 +1,28 @@
 package jotGenerator;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Control;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 
 public class JotApplication extends Application{
 
-    public void start(Stage stage){
+    public void start(Stage stage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("JotInterface.fxml"));
+
         stage.setTitle("Jot");
         stage.setMinHeight(450);
         stage.setMinWidth(400);
 
-        VBox vertContainer = new VBox(50);
-        vertContainer.setAlignment(Pos.TOP_CENTER);
-        //vertContainer.setPadding(new Insets(50));
+        stage.setResizable(false);
 
-        Scene contents = new Scene(vertContainer);
-        contents.getStylesheets().add("JotGlobal.css");
-
-        vertContainer.getChildren().add(new JotLabel("JOT", 150, 60));
-        vertContainer.getChildren().add(new JotInput("Words", vertContainer, 175, 40));
-        vertContainer.getChildren().add(new JotInput("Noun", 175, 40));
-
-        stage.setScene(contents);
+        stage.setScene(new Scene(root));
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
 
         /*boolean genNoun = false;
         int adjectives = 0;

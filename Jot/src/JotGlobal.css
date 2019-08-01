@@ -1,6 +1,16 @@
 . root{
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
+    -fx-background-color: #FFF;
+}
+
+. heading{
+    -fx-text-fill: #AAA;
+    -fx-font-family: "Tahoma", "SansSerif";
+    -fx-font-size: 40pt;
 }
 
 . text-field{
@@ -8,4 +18,8 @@
     -fx-border-color: #3988FF;
     -fx-border-width: 3px;
     -fx-border-radius: 12.5px;
+    -fx-max-width: 300px;
+    -fx-max-height: 80px;
 }
+
+

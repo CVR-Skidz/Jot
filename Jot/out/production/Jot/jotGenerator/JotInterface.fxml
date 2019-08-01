@@ -1,0 +1,28 @@
+<?import javafx.scene.layout.Pane ?>
+<?import javafx.scene.control.Label ?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.shape.Line?>
+<Pane fx:controller="jotGenerator.JotController"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="contents"
+      stylesheets="JotGlobal.css">
+
+    <Label text="JOT" prefWidth="${contents.width}" styleClass="heading"
+           alignment="CENTER" layoutY="${contents.height / 9}"/>
+
+    <VBox spacing="${contents.height / 22.5}" layoutY="${contents.height / 2.66}">
+        <HBox prefWidth="${contents.width}" alignment="CENTER">
+            <TextField text="Words" prefWidth="${contents.width / 2.25}" prefHeight="${contents.height / 10}"/>
+        </HBox>
+
+        <HBox prefWidth="${contents.width}" alignment="CENTER">
+            <TextField text="Noun" prefWidth="${contents.width / 2.25}" prefHeight="${contents.height / 10}"/>
+        </HBox>
+    </VBox>
+
+    <HBox fx:id="result" prefWidth="${contents.width / 2}" alignment="CENTER" layoutY="${contents.height / 1.33}" />
+
+</Pane>
