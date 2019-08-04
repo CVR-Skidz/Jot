@@ -5,19 +5,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.StageStyle;
 
 public class JotApplication extends Application{
 
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("JotInterface.fxml"));
 
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Jot");
-        stage.setMinHeight(450);
-        stage.setMinWidth(400);
 
         stage.setResizable(false);
 
-        stage.setScene(new Scene(root));
+        stage.setScene(new Scene(root, 400, 450));
         stage.show();
     }
 

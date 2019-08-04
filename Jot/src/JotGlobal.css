@@ -7,19 +7,12 @@
     -fx-background-color: #FFF;
 }
 
-. heading{
-    -fx-text-fill: #AAA;
-    -fx-font-family: "Tahoma", "SansSerif";
-    -fx-font-size: 40pt;
-}
-
 . text-field{
-    -fx-text-fill: #4fbaff;
-    -fx-border-color: #3988FF;
-    -fx-border-width: 3px;
-    -fx-border-radius: 12.5px;
-    -fx-max-width: 300px;
-    -fx-max-height: 80px;
+    -fx-background-color: #F3F0FF;
+    -fx-text-fill: #634FB5;
+    -fx-background-radius: 15px;
 }
 
-
+. entry{
+    -fx-background-radius: 1000px;
+}
