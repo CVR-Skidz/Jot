@@ -67,17 +67,11 @@ public class JotDictionary {
         String output = "";
         Random numberGen = new Random(new Date().getTime());
 
-        System.out.println("[New Pass]");
-
         for(int i = 0; i < wordCount; ++i) {
-            System.out.println("["+ (i + 1) + "]");
-
             int localIndex = Math.abs(numberGen.nextInt())%length;
 
             output = output.concat(words.get(localIndex%length) + " ");
         }
-
-        System.out.println("[End Pass]");
         return output;
     }
 }

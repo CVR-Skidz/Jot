@@ -9,7 +9,8 @@
 <Pane fx:controller="jotGenerator.JotController"
       xmlns:fx="http://javafx.com/fxml"
       fx:id="contents"
-      stylesheets="JotGlobal.css">
+      stylesheets="JotGlobal.css"
+      onKeyPressed="#generate">
 
     <HBox prefHeight="25" fx:id="banner" prefWidth="${contents.width}"/>
 
@@ -18,12 +19,12 @@
 
             <Label text="Jot" alignment="CENTER_LEFT" prefWidth="${contents.width * 0.6875}"/>
 
-            <TextField text="#" prefWidth="40" prefHeight="40" alignment="CENTER" fx:id="count"/>
+            <TextField promptText="#" prefWidth="40" prefHeight="40" alignment="CENTER" fx:id="count"/>
 
         </HBox>
 
         <HBox alignment="CENTER_LEFT">
-            <TextField text=">" HBox.hgrow="ALWAYS" prefHeight="50" styleClass="entry"/>
+            <TextField promptText="Enter a subject (optional)" HBox.hgrow="ALWAYS" prefHeight="50" styleClass="entry" fx:id="noun"/>
         </HBox>
 
         <VBox fx:id="output" spacing="25"/>

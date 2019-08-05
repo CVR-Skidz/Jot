@@ -18,7 +18,6 @@ public class JotOutput extends HBox {
 
     public static int OUTPUTS;
 
-
     public JotOutput(){
         super();
 
@@ -59,5 +58,9 @@ public class JotOutput extends HBox {
         container.getChildren().add(border);
 
         getChildren().add(container);
+    }
+
+    public void setLabel(String text) {
+        this.label.setText(text);
     }
 }

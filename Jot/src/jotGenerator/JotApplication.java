@@ -10,7 +10,7 @@ import javafx.stage.StageStyle;
 public class JotApplication extends Application{
 
     public void start(Stage stage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("JotInterface.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/JotInterface.fxml"));
 
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Jot");
