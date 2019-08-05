@@ -1,10 +1,8 @@
 package jotGenerator;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class JotController{
@@ -20,6 +18,7 @@ public class JotController{
     private TextField noun;
 
     public void initialize() {
+        output.getChildren().add(new JotOutput());
         output.getChildren().add(new JotOutput());
         output.getChildren().add(new JotOutput());
         output.getChildren().add(new JotOutput());

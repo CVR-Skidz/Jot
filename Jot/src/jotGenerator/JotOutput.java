@@ -44,7 +44,7 @@ public class JotOutput extends HBox {
     private void insertContainer(){
         VBox container = new VBox();
 
-        label = new Label(Integer.toString(OUTPUTS));
+        label = new Label("Awaiting Input");
         label.setMinSize(300,35);
         label.setFont(Font.font("Segoe UI", FontWeight.BOLD, 12));
 
