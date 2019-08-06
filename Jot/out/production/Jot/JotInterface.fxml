@@ -4,20 +4,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.shape.Line?>
-<?import javafx.geometry.Insets?>
 <Pane fx:controller="jotGenerator.JotController"
       xmlns:fx="http://javafx.com/fxml"
       fx:id="contents"
       stylesheets="JotGlobal.css"
       onKeyPressed="#generate">
 
-    <HBox prefHeight="25" fx:id="banner" prefWidth="${contents.width}"/>
-
-    <VBox spacing="${contents.height / 16}" prefWidth="${contents.width * 0.85}" layoutX="${contents.width / 15}" layoutY="${banner.height}">
+    <VBox spacing="${contents.height / 16}" prefWidth="${contents.width * 0.85}" layoutX="${contents.width / 15}" layoutY="25">
         <HBox alignment="CENTER_LEFT" spacing="${contents.width / 15}">
 
-            <Label text="Jot" alignment="CENTER_LEFT" prefWidth="${contents.width * 0.6875}"/>
+            <Label text="Jöt" alignment="CENTER_LEFT" prefWidth="${contents.width * 0.6875}"/>
 
             <TextField promptText="#" prefWidth="40" prefHeight="40" alignment="CENTER" fx:id="count"/>
 

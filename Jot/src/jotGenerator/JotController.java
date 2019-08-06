@@ -1,12 +1,22 @@
 package jotGenerator;
 
+import com.sun.javafx.geom.Vec2d;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
+/**
+ * Interface input behaviour
+ *
+ * @author CVR-Skidz
+ */
 public class JotController{
     private int round;
+
+    @FXML
+    private Pane contents;
 
     @FXML
     private VBox output;
@@ -22,6 +32,8 @@ public class JotController{
         output.getChildren().add(new JotOutput());
         output.getChildren().add(new JotOutput());
         output.getChildren().add(new JotOutput());
+
+        contents.getChildren().add(new JotTitlebar(contents));
     }
 
     public void generate() {
