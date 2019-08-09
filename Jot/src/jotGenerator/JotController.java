@@ -31,7 +31,6 @@ public class JotController{
         output.getChildren().add(new JotOutput());
         output.getChildren().add(new JotOutput());
         output.getChildren().add(new JotOutput());
-        output.getChildren().add(new JotOutput());
 
         contents.getChildren().add(new JotTitlebar(contents));
     }

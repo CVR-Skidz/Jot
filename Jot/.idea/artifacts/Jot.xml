@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Jot">
+    <output-path>$PROJECT_DIR$/out/artifacts/Jot</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="JotApplication.Java" />
+        <option name="description" value="" />
+        <option name="height" value="450" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Jöt" />
+        <option name="vendor" value="CVR-Skidz" />
+        <option name="version" value="" />
+        <option name="width" value="400" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Jot.jar">
+        <element id="module-output" name="Jot" />
+      </element>
+    </root>
+  </artifact>
+</component>

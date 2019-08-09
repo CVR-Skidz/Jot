@@ -10,7 +10,7 @@
       stylesheets="JotGlobal.css"
       onKeyPressed="#generate">
 
-    <VBox spacing="${contents.height / 16}" prefWidth="${contents.width * 0.85}" layoutX="${contents.width / 15}" layoutY="25">
+    <VBox spacing="${contents.height / 16}" prefWidth="${contents.width * 0.85}" layoutX="${contents.width / 15}" layoutY="50">
         <HBox alignment="CENTER_LEFT" spacing="${contents.width / 15}">
 
             <Label text="Jöt" alignment="CENTER_LEFT" prefWidth="${contents.width * 0.6875}"/>
