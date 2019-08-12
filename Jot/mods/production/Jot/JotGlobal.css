@@ -1,0 +1,30 @@
+. root{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
+    -fx-background-color: #FFF;
+}
+
+. text-field{
+    -fx-background-color: #F3F0FF;
+    -fx-text-fill: #634FB5;
+    -fx-background-radius: 15px;
+    -fx-prompt-text-fill: rgba(99, 79, 181, 0.75);
+}
+
+. entry{
+    -fx-background-radius: 1000px;
+}
+
+. button{
+    -fx-background-color: none;
+    -fx-font-size: 8pt;
+    -fx-text-fill: #888;
+}
+
+#contents {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}

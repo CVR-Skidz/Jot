@@ -1,6 +1,5 @@
 package jotGenerator;
 
-import com.sun.javafx.geom.Vec2d;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;

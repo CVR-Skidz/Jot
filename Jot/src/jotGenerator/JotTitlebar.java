@@ -28,7 +28,6 @@ public class JotTitlebar extends HBox {
 
         setOnMousePressed(this::setLocalDif);
         setOnMouseDragged(this::positionWindow);
-        setOnMouseEntered(this::previewCursor);
     }
 
     private void initControls() {
@@ -56,7 +55,6 @@ public class JotTitlebar extends HBox {
         localCursorDif = new Point2D(event.getScreenX(), event.getScreenY());
         localCursorDif = localCursorDif.subtract(localToScreen(getLayoutBounds()).getMinX(), localToScreen(getLayoutBounds()).getMinY());
 
-        setCursor(Cursor.CLOSED_HAND);
         //System.out.println(localCursorDif);
     }
 
@@ -67,9 +65,5 @@ public class JotTitlebar extends HBox {
 
         window.setX(globalPos.subtract(localCursorDif).getX());
         window.setY(globalPos.subtract(localCursorDif).getY());
-    }
-
-    private void previewCursor(MouseEvent event) {
-        setCursor(Cursor.OPEN_HAND);
     }
 }

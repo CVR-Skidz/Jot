@@ -1,0 +1,29 @@
+<?import javafx.scene.layout.Pane ?>
+<?import javafx.scene.control.Label ?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:controller="jotGenerator.JotController"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="contents"
+      stylesheets="JotGlobal.css"
+      onKeyPressed="#generate">
+
+    <VBox spacing="${contents.height / 16}" prefWidth="${contents.width * 0.85}" layoutX="${contents.width / 15}" layoutY="50">
+        <HBox alignment="CENTER_LEFT" spacing="${contents.width / 15}">
+
+            <Label text="Jöt" alignment="CENTER_LEFT" prefWidth="${contents.width * 0.6875}"/>
+
+            <TextField promptText="#" prefWidth="40" prefHeight="40" alignment="CENTER" fx:id="count"/>
+
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT">
+            <TextField promptText="Enter a subject (optional)" HBox.hgrow="ALWAYS" prefHeight="50" styleClass="entry" fx:id="noun"/>
+        </HBox>
+
+        <VBox fx:id="output" spacing="25"/>
+
+    </VBox>
+</Pane>
