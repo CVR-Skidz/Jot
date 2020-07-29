@@ -4,7 +4,6 @@ Jot is a java application that generates project names similarly to Github's rep
 If you've ever wnated to regenerate one of these names, this is your program.
 
 ![Jot UI](https://github.com/CVR-Skidz/Jot/blob/master/examples/jot.png)
-![Filled Jot UI](https://github.com/CVR-Skidz/Jot/blob/master/examples/jot2.png)
 
 # Install
 Jot comes as a UI or CLI tool, it's portable so just download the appropriate release.
